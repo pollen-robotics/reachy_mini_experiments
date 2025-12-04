@@ -171,9 +171,9 @@ def compute_breathing_pose(t: float, config: Config) -> tuple[np.ndarray, np.nda
     Compute breathing/idle pose when music state is unstable.
 
     Based on pi-500-reachy-mini-client-1 BreathingMove with modifications:
-    - Y sway: 8mm amplitude, 0.2 Hz (5 second cycle)
-    - Head roll: 15% intensity sin wave at 0.15 Hz
-    - Antenna sway: 24° amplitude (2x original 12°), 0.5 Hz
+    - Y sway: 16mm amplitude, 0.2 Hz (5 second cycle)
+    - Head roll: 30° amplitude sin wave at 0.15 Hz
+    - Antenna sway: 0° amplitude (no movement during breathing)
 
     Returns:
         (position, orientation, antennas) - all as numpy arrays
