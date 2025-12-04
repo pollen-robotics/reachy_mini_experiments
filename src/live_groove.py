@@ -392,7 +392,7 @@ def clamp_bpm(bpm: float, bpm_min: float, bpm_max: float) -> float:
     between e.g. 83 and 166 BPM for the same song.
     """
     if bpm <= 0:
-        return bpm
+        raise ValueError(f"BPM must be positive, got {bpm}")
 
     # Double until we're at or above minimum
     while bpm < bpm_min:
