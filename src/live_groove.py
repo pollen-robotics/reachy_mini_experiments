@@ -269,7 +269,7 @@ def calibrate_noise_with_breathing(mini: ReachyMini, config: Config) -> np.ndarr
     stft = librosa.stft(audio, n_fft=n_fft, hop_length=hop_length)
     noise_profile = np.mean(np.abs(stft), axis=1)
 
-    print(f"\r✅ Noise calibration complete. Motor noise captured. Profile shape: {noise_profile.shape}     ")
+    print(f"\033[2K\r✅ Noise calibration complete. Motor noise captured. Profile shape: {noise_profile.shape}")
     return noise_profile
 
 
